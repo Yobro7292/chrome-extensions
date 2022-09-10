@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery jGravity Plugin Demo</title>
+
+    <!-- jQuery *Required -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jGravity file -->
+    <script type="text/javascript" src="jGravity.js"></script>
+
+    <script>
+      $(document).ready(() => {
+        $("div.jGravity").on("click", () => {
+          // This can be changed to anything you like in order to trigger jGravity effect
+          $("body").jGravity({
+            // jGravity works best when targeting the body
+            target: "img", // Enter your target critera e.g. 'div, p, span', 'h2' or 'div#specificDiv', or even 'everything' to target everything in the body
+            ignoreClass: "ignoreMe", // Specify if you would like to use an ignore class, and then specify the class
+            weight: 25, // Enter any number 1-100 ideally (25 is default), you can also use 'heavy' or 'light'
+            depth: 5, // Enter a value between 1-10 ideally (1 is default), this is used to prevent targeting structural divs or other items which may break layout in jGravity
+            drag: true, // Decide if users can drag elements which have been effected by jGravity
+          });
+        });
+      });
+    </script>
+
+    <style>
+      /* Misc styles used for demo purposes */
+      body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+      }
+
+      div.box {
+        height: 100px;
+        width: 100px;
+        float: left;
+        margin: 10px;
+        color: white;
+        text-align: center;
+      }
+
+      div.blackHeader {
+        width: 100%;
+        clear: both;
+        height: 30px;
+      }
+      div.blackHeader div.headPiece {
+        background: #333;
+        width: 5%;
+        float: left;
+        height: 30px;
+      }
+      div.blackHeader div.headPiece p {
+        color: white;
+        text-align: center;
+        padding-top: 5px;
+      }
+      div.blackHeader div.headPiece p a {
+        color: white;
+        text-decoration: none;
+      }
+
+      div.logoBar {
+        width: 100%;
+        clear: both;
+        height: 70px;
+      }
+      div.logoBar div.barPiece {
+        background: #f1f1f1;
+        width: 20%;
+        height: 70px;
+        border-bottom: 1px solid #e2e2e2;
+        float: left;
+      }
+      div.logoBar h1 {
+        color: #333;
+        text-align: center;
+        font-size: 30px;
+        padding-top: 12px;
+        font-weight: normal;
+      }
+      div.logoBar h1 a {
+        color: #333;
+        padding-bottom: 2px;
+      }
+
+      div.goBtnCentre {
+        width: 100%;
+        clear: both;
+        height: 80px;
+        margin: 20px 0;
+      }
+      div.goButton {
+        height: 80px;
+        background: #e7534a;
+        border: 1px solid #ce2117;
+        width: 200px;
+        margin: 0 auto;
+      }
+      div.goButton h2 {
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        font-weight: normal;
+        line-height: 80px;
+        cursor: pointer;
+      }
+      div.goButton h2 a {
+        color: white;
+      }
+
+      div.duckCentre {
+        width: 100%;
+        clear: both;
+        height: 500px;
+        margin: 20px 0;
+      }
+      div.duckCentre div.duckInner {
+        width: 740px;
+        margin: 0 auto;
+      }
+      div.duckCentre div.duck {
+        background: #fff;
+        float: left;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- All HTML elements are used for demo purposes - jGravity should work correctly on most layouts. If you do find a problem item/s, play with the depth and ignoring certain items until you get it right -->
+
+    <div class="blackHeader ignoreMe">
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+      <div class="headPiece"></div>
+    </div>
+
+    <div class="logoBar ignoreMe">
+      <div class="barPiece"></div>
+      <div class="barPiece"></div>
+      <div class="barPiece">
+        <h1 class="ignoreMe">
+          <a class="ignoreMe" href="http://tinybigideas.com"
+            >tiny<strong class="ignoreMe">BIG</strong>ideas</a
+          >
+        </h1>
+      </div>
+      <div class="barPiece"></div>
+      <div class="barPiece"></div>
+    </div>
+
+    <div class="goBtnCentre ignoreMe">
+      <div class="goButton jGravity">
+        <h2 class="ignoreMe">Init jGravity</h2>
+      </div>
+    </div>
+
+    <div class="duckCentre ignoreMe">
+      <div class="duckInner ignoreMe">
+        <div class="duck">
+          <img class="img" src="img/duck1.jpg" />
+        </div>
+        <div class="duck"><img class="img" src="img/duck2.jpg" /></div>
+        <div class="duck"><img class="img" src="img/duck3.jpg" /></div>
+      </div>
+    </div>
+    <!-- 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-36251023-1"]);
+      _gaq.push(["_setDomainName", "jqueryscript.net"]);
+      _gaq.push(["_trackPageview"]);
+
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script> -->
+  </body>
+</html>

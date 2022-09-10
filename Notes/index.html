@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="tail.css" />
+  </head>
+  <body class="">
+    <div class="flex flex-col justify-center item-center p-1">
+      <textarea
+        name="notes"
+        id="note"
+        cols="30"
+        rows="10"
+        class="border border-red-600 p-2 mb-4 rounded border-2 focus:outline-green-600"
+        placeholder="Enter some notes."
+      ></textarea>
+      <div class="flex justify-between">
+        <button
+          name="done"
+          id="doneBtn"
+          class="text-red-500 bg-red-200 hover:bg-green-200 hover:text-green-500 px-4 py-2 rounded w-full mr-1"
+        >
+          Done
+        </button>
+        <button
+          name="clear"
+          id="clrBtn"
+          class="text-blue-500 bg-blue-200 hover:bg-green-200 hover:text-green-500 px-4 py-2 rounded w-full ml-1"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

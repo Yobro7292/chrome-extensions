@@ -1,0 +1,22 @@
+{
+  "name": "Gravity",
+  "version": "1.0.1",
+  "manifest_version": 3,
+  "icons": {
+    "128": "gravity_icon.png"
+  },
+  "action": {
+    "default_icon": "gravity_icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery.js", "jGravity.js", "content.js"],
+      "css": ["imageMarker.css"]
+    }
+  ],
+  "permissions": ["tabs"]
+}
