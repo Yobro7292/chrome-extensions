@@ -37,12 +37,13 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
           $("body").css("position", "absolute");
           $("body").css("top", "0");
           // $("body").css("left", "0");
-          $("body").css("margin-top", "-70px");
+          $("body").css("height", "100%");
+          $("html").css("transform", "scale(0.9)");
           $("body").jGravity({
             target: "div#gravity",
             ignoreClass: "ignoreMe",
             weight: 25,
-            depth: 10,
+            depth: 7,
             drag: true,
           });
 
